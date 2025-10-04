@@ -7,20 +7,23 @@
   "inbounds": [
     {
       "port": 8080,
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "clients": [
           {
             "id": "b831381d-6324-4d53-ad4f-8cda48b30811",
-            "alterId": 0,
-            "security": "auto"
+            "flow": ""
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/tg-privatepass"
+          "path": "/tg-privatepass",
+          "headers": {
+            "Host": ""
+          }
         },
         "security": "none"
       }
@@ -55,7 +58,8 @@
           "geosite:github",
           "geosite:cloudflare",
           "geosite:openai",
-          "geosite:google-scholar"
+          "geosite:google-scholar",
+          "domain:firebaseremoteconfig.googleapis.com"
         ]
       },
       {
